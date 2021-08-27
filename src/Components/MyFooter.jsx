@@ -6,7 +6,7 @@ const MyFooter = () => {
         <div className="footer">
             <div className="container">
                 <div className="row">
-                    <div className="col" lg={12} text-left>
+                    <div className="col">
                         <a href="#"><img src="assets/icons/facebook-2-48.png" height="30"></img></a>
                         <a href="#"><img src="assets/icons/instagram-2-48.png" height="30"></img></a>
                         <a href="#"><img src="assets/icons/twitter-2-48.png" height="30"></img></a>
@@ -47,10 +47,11 @@ const MyFooter = () => {
                         </tr>
 
                     </tbody>
+                    <div style={{ textAlign: "left" }}>© 1997-2019 Netflix, Inc.</div>
                 </Table>
 
             </div>
-            <div style={{ textAlign: "left" }}>© 1997-2019 Netflix, Inc.</div>
+
         </div>
 
     )

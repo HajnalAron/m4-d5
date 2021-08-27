@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -21,5 +22,20 @@ code {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+thead{
+  font-size: 12px;
+}
+tbody{
+  font-size: 12px;
+}
+.col{
+  margin-right: 800px;
+  border-radius: 50%;
+  
+}
+
+.col a + a{
+  padding-left: 1em;
 }
 
