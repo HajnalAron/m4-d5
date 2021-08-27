@@ -1,5 +1,5 @@
 import { Component } from "react";
-import {Nav, Navbar, Dropdown, Form, FormControl} from "react-bootstrap"
+import {Nav, Navbar, Dropdown,} from "react-bootstrap"
 
 class NetflixNavbar extends Component{
     render() {
@@ -16,18 +16,15 @@ class NetflixNavbar extends Component{
                     <Nav.Link className="text-white" href="#home">Recently Added</Nav.Link>
                     <Nav.Link className="text-white" href="#link">My List</Nav.Link>
                     </Nav>
-                    <Dropdown className="Transparent">
-                    <Dropdown.Toggle className="Transparent" id="dropdown-basic">
-                        <img src="assets\icons\search-13-48.png" height="24"/>
+                    <Dropdown className="d-inline mx-2 Transparent" drop='left'>
+                    <Dropdown.Toggle className="Transparent">
+                    <img src="assets\icons\search-13-48.png" height="24"/>
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1"><Form inline>
-                        <FormControl type="text" placeholder="Search..." className="mr-sm-2" />
-                    </Form></Dropdown.Item>
+                    <input value={this.props.query} onChange={e=> this.props.onChange(e.target.value)} type="text" placeholder="Search..." className="mr-sm-2" />
                     </Dropdown.Menu>
-                    </Dropdown>
-                    
+                    </Dropdown>                    
                 </Navbar.Collapse>
             </Navbar>
             </div>
