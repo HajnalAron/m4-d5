@@ -1,7 +1,9 @@
+
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NetflixNavbar from "./components/Navbar";
 import GetMovies from "./components/GetMovies";
+import MyFooter from './Components/MyFooter';
 import { Component } from "react";
 
 class App extends Component {
@@ -22,6 +24,7 @@ class App extends Component {
             <GetMovies search="marvel" />
             <GetMovies search="harry potter" />
             <GetMovies search="lord of the rings" />{" "}
+            <MyFooter />
           </>
         )}
         {this.state.query.length > 0 && <GetMovies search={this.state.query} />}
