@@ -1,9 +1,11 @@
 import { Component } from "react";
 import DisplayMovies from "./DisplayMovies";
+import { Spinner } from "react-bootstrap";
 
 class GetMovies extends Component {
-  state = {   
+  state = {
     movies: [],
+    isLoading: true
   };
   fetchMovies = async () => {
     try {
@@ -12,9 +14,10 @@ class GetMovies extends Component {
       );
       if (resp.ok) {
         let fetchedMovies = await resp.json();
-       
+
         this.setState({
           movies: fetchedMovies.Search,
+          isLoading: false
         });
       }
     } catch (error) {
@@ -33,7 +36,11 @@ class GetMovies extends Component {
   render() {
     return (
       <>
-        <DisplayMovies movies={this.state.movies} />
+        {this.state.isLoading ? (
+          <Spinner className={"mx-auto"} animation="border" variant="dark" />
+        ) : (
+          <DisplayMovies movies={this.state.movies} />
+        )}
       </>
     );
   }

@@ -6,7 +6,7 @@ import { Component } from "react";
 
 class App extends Component {
   state = {
-    query: "",
+    query: ""
   };
   render() {
     console.log(this.state);
@@ -24,7 +24,7 @@ class App extends Component {
             <GetMovies search="lord of the rings" />{" "}
           </>
         )}
-        {this.state.query.length > 0 && <GetMovies search={this.state.query} />}
+        {this.state.query.length > 3 && <GetMovies search={this.state.query} />}
       </div>
     );
   }
